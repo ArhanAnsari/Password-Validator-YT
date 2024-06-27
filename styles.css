@@ -1,0 +1,115 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 14px;
+    color: #888888;
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s;
+}
+
+input[type="password"]:focus + label,
+input[type="password"]:valid + label {
+    top: -20px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#message {
+    text-align: left;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#message p {
+    margin: 5px 0;
+}
+
+.invalid {
+    color: red;
+}
+
+.valid {
+    color: green;
+}
+
+.strength-meter {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0;
+    background-color: red;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

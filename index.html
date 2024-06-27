@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Validator</h1>
+        <form id="passwordForm">
+            <div class="input-container">
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <label for="password">Password</label>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
+            <div id="message">
+                <p id="length" class="invalid" title="At least 8 characters long">Minimum 8 characters</p>
+                <p id="uppercase" class="invalid" title="At least one uppercase letter (A-Z)">At least one uppercase letter</p>
+                <p id="lowercase" class="invalid" title="At least one lowercase letter (a-z)">At least one lowercase letter</p>
+                <p id="number" class="invalid" title="At least one number (0-9)">At least one number</p>
+                <p id="special" class="invalid" title="At least one special character (!@#$%^&*(),.?\&quot;:{}|<>)">At least one special character</p>
+            </div>
+            <div class="strength-meter">
+                <div id="strength-bar"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
